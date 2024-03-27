@@ -17,7 +17,7 @@ function Contact() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('/submit', formData);
+            await axios.post('https://tarunsaisrinivas.vercel.app/submit', formData);
             alert('Message submitted successfully!');
             setFormData({ name: '', email: '', message: '' });
         } catch (err) {
