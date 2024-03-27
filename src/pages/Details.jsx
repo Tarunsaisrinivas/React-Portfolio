@@ -6,7 +6,7 @@ function Details() {
 
     useEffect(() => {
         fetchMessages();
-    }, []); // Fetch messages when component mounts
+    }, []); 
 
     const fetchMessages = async () => {
         try {

@@ -29,7 +29,7 @@ function Contact() {
     return (
         <div id='contact' className="flex items-center justify-center min-h-screen bg-gray-800">
             <div className="w-5/6 p-8 mx-auto bg-gray-700 rounded-lg shadow-lg" data-aos="fade-down">
-                <h1 className="mb-4 text-3xl font-semibold text-center text-white">Contact Us</h1>
+                <h1 className="mb-4 text-3xl font-semibold text-center text-white">Contact</h1>
                 <form onSubmit={handleSubmit} autoComplete='off' className="space-y-4" >
                     <div>
                         <label htmlFor="name" className="block text-sm font-medium text-white">Name:</label>

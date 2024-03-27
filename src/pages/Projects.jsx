@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { CiShare1 } from "react-icons/ci";
-import { FaDownload } from "react-icons/fa";
+import { FaDownload,FaGithub } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -142,13 +142,13 @@ const Projects = () => {
             </p>
             <div className="flex justify-between">
               <a
-                href="https://expo.dev//accounts/tarun_sai_srinivas/projects/recipes/builds/364c7b9c-e792-44fe-baff-5534a4d341f8"
+                href="https://github.com/Tarunsaisrinivas/EazyLetter.git"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <button className="flex items-center gap-2 px-4 py-2 text-white transition duration-300 bg-gray-500 rounded-lg hover:bg-blue-400">
-                  <FaDownload />
-                  Install
+                <FaGithub />
+                Repo
                 </button>
               </a>
             </div>
