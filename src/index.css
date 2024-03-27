@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{
+    overflow-x: hidden;
+}
+
+@media screen and (max-width: 768px) {
+    html{
+        overflow-x: hidden;
+    }
+  }
