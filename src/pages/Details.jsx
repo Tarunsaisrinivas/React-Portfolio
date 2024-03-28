@@ -10,7 +10,7 @@ function Details() {
 
     const fetchMessages = async () => {
         try {
-            const response = await axios.get('https://react-portfolio-1-hu4t.onrender.com/messages');
+            const response = await axios.get('http://localhost:5000/messages');
             setMessages(response.data);
         } catch (err) {
             console.error('Error fetching messages:', err);
