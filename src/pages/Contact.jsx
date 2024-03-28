@@ -18,7 +18,7 @@ function Contact() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:5000/submit', formData);
+            await axios.post('https://react-portfolio-1-hu4t.onrender.com/submit', formData);
             alert('Message submitted successfully!');
             setFormData({ name: '', email: '', message: '' });
         } catch (err) {
