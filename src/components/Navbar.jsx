@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 p-4 bg-gray-800 border-b border-white ">
       <div className="flex items-center justify-between mx-auto max-w-7xl">
-        <div className="text-lg font-bold text-white">Logo</div>
+        <div className="text-lg font-bold text-white">Portfolio</div>
 
         <div className="md:hidden">
           <button
@@ -119,7 +119,7 @@ const Navbar = () => {
             offset={-70}
             duration={500}
             className={`block px-4 py-2 text-white ${
-              activeLink === "project" ? "border-yellow-600 border-b-2" : ""
+              activeLink === "project" ? "border-yellow-600 border-b-2 w-16" : ""
             }`}
             to="skills"
             activeClass="active"
@@ -133,7 +133,7 @@ const Navbar = () => {
             offset={-70}
             duration={500}
             className={`block px-4 py-2 text-white ${
-              activeLink === "services" ? "border-yellow-600 border-b-2" : ""
+              activeLink === "services" ? "border-yellow-600 border-b-2 w-16 " : ""
             }`}
             to="services"
             activeClass="active"
@@ -147,7 +147,7 @@ const Navbar = () => {
             offset={-70}
             duration={500}
             className={`block px-4 py-2 text-white ${
-              activeLink === "contact" ? "border-yellow-600 border-b-2" : ""
+              activeLink === "contact" ? "border-yellow-600 border-b-2 w-16" : ""
             }`}
             to="contact"
             activeClass="active"
