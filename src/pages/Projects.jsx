@@ -4,14 +4,14 @@ import { FaDownload,FaGithub } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const Projects = () => {
+const Projects = ({darkMode}) => {
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
 
   return (
-    <div id="projects" className="min-h-screen py-12 bg-gray-800 ">
-      <h1 className="mb-12 text-4xl text-center text-white lg:text-5xl xl:text-6xl">
+    <div id="projects" className={`min-h-screen py-12 ${darkMode? "bg-gray-300":""} bg-gray-800`} >
+      <h1 className={`mb-12 text-4xl text-center  ${darkMode ? "text-gray-800 " : "text-white"}  lg:text-5xl xl:text-6xl`}>
         Projects
       </h1>
       <div className="container grid grid-cols-1 gap-8 mx-auto md:grid-cols-2 lg:grid-cols-2">
