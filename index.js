@@ -54,6 +54,10 @@ app.get('/messages', async (req, res) => {
     }
 });
 
+app.use("/",(req,res)=>{
+    res.send(`Hello this is portfolio server
+    Redirect to <a href="https://tarunsaisrinivas.vercel.app/">https://tarunsaisrinivas.vercel.app/</a>`);
+})
 
 // Start server
 const PORT = process.env.PORT || 5000;
