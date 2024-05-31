@@ -22,7 +22,7 @@ const Skills = ({ darkMode }) => {
         >
           Skills
         </h2>
-        <div className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-5">
+        <div className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-3 lg:w-2/3 m-auto">
           {/* HTML */}
           <div
             className="p-4 text-white bg-gray-700 rounded-lg shadow-md hover:bg-blue-400 hover:cursor-pointer hover:transition-all"
@@ -77,7 +77,7 @@ const Skills = ({ darkMode }) => {
             />
             <h3 className="text-xl font-semibold text-center">React</h3>
           </div>
-
+        
           {/* Tailwind CSS */}
           <div
             className="p-4 text-white bg-gray-700 rounded-lg shadow-md hover:bg-blue-400 hover:cursor-pointer hover:transition-all"
@@ -93,6 +93,20 @@ const Skills = ({ darkMode }) => {
               Tailwind CSS
             </h3>
           </div>
+            {/* React */}
+            <div
+            className="p-4 text-white bg-gray-700 rounded-lg shadow-md hover:bg-blue-400 hover:cursor-pointer hover:transition-all"
+            data-aos="fade-up"
+            data-aos-delay="600"
+          >
+            <img
+              src="https://images.crunchbase.com/image/upload/c_pad,h_256,w_256,f_auto,q_auto:eco,dpr_1/yyetqsumqfztsv9im2fz"
+              alt="Next js"
+              className="w-full mb-4 rounded-lg"
+            />
+            <h3 className="text-xl font-semibold text-center">Next js</h3>
+          </div>
+
         </div>
       </div>
     </div>
