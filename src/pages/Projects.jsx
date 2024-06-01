@@ -10,14 +10,14 @@ const Projects = ({darkMode}) => {
   }, []);
 
   return (
-    <div id="projects" className={`min-h-screen py-12 ${darkMode? "bg-gray-300":""} bg-gray-800`} >
+    <div id="projects" className={`min-h-screen py-12 ${darkMode? "bg-gray-300":""} bg-gray-800 `} >
       <h1 className={`mb-12 text-4xl text-center  ${darkMode ? "text-gray-800 " : "text-white"}  lg:text-5xl xl:text-6xl`}>
         Projects
       </h1>
       <div className="container grid grid-cols-1 gap-8 mx-auto md:grid-cols-2 lg:grid-cols-2">
         {/* Card 1 */}
         <div
-          className="flex bg-gray-700 rounded-lg shadow-md "
+          className="flex bg-gray-700 rounded-lg shadow-md cursor-pointer hover:shadow-lg hover:shadow-slate-500 "
           data-aos="fade-up"
         >
           <img
@@ -51,7 +51,7 @@ const Projects = ({darkMode}) => {
 
         {/* Card 2 */}
         <div
-          className="flex bg-gray-700 rounded-lg shadow-md"
+          className="flex bg-gray-700 rounded-lg shadow-md cursor-pointer hover:shadow-lg hover:shadow-slate-500 "
           data-aos="fade-up"
           data-aos-delay="200"
         >
@@ -85,7 +85,7 @@ const Projects = ({darkMode}) => {
 
         {/* Card 3 */}
         <div
-          className="flex bg-gray-700 rounded-lg shadow-md"
+          className="flex bg-gray-700 rounded-lg shadow-md cursor-pointer hover:shadow-lg hover:shadow-slate-500 "
           data-aos="fade-up"
           data-aos-delay="400"
         >
@@ -120,7 +120,7 @@ const Projects = ({darkMode}) => {
         </div>
         {/* Card 4 */}
         <div
-          className="flex bg-gray-700 rounded-lg shadow-md"
+          className="flex bg-gray-700 rounded-lg shadow-md cursor-pointer hover:shadow-lg hover:shadow-slate-500 "
           data-aos="fade-up"
           data-aos-delay="400"
         >

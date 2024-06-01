@@ -84,7 +84,7 @@ const Home = ({ darkMode }) => {
         </div>
       </div>
 
-      {/* <p class="flex justify-center items-center space-x-4">
+      {/* <p className="flex justify-center items-center space-x-4">
         <img
           src="https://github-readme-stats.vercel.app/api/top-langs?username=tarunsaisrinivas&show_icons=true&locale=en&layout=compact"
           alt="tarunsaisrinivas"
@@ -95,6 +95,7 @@ const Home = ({ darkMode }) => {
           alt="tarunsaisrinivas"
         />
       </p> */}
+      
     </div>
   );
 };
