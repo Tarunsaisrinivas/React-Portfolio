@@ -52,11 +52,16 @@ const Home = ({ darkMode }) => {
           >
             Hi there! I'm Tarun Sai Srinivas, a passionate Frontend Developer
             with expertise in React.js. I specialize in crafting dynamic,
-            responsive websites that provide exceptional user experiences.
-            <br />I excel in creating intuitive interfaces from concept to
-            execution, focusing on clean code, modular architecture, and
-            performance optimization. My portfolio includes e-commerce
-            platforms, corporate websites, and web applications.
+            responsive websites that provide exceptional user experiences. I
+            excel in creating intuitive interfaces from concept to execution,
+            focusing on clean code, modular architecture, and performance
+            optimization.
+            <br />
+            My portfolio includes a variety of projects such as a college
+            department site built with HTML, CSS, and JavaScript, a chat
+            application using React and Firebase with encrypted messaging, and a
+            recipe app featuring an API with a search bar developed in React
+            Native Expo.
           </p>
           {/* Buttons */}
           <div className="flex flex-row space-y-0 md:flex-row md:space-y-0 md:space-x-4">
@@ -95,7 +100,6 @@ const Home = ({ darkMode }) => {
           alt="tarunsaisrinivas"
         />
       </p> */}
-      
     </div>
   );
 };
