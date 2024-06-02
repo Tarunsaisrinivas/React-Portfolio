@@ -1,10 +1,12 @@
 import React, { useEffect } from "react";
 import Typewriter from "typewriter-effect";
 import { FaGithub, FaLinkedin, FaFileAlt } from "react-icons/fa";
+import { IoIosMail } from "react-icons/io";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./home.css";
 import { Tilt } from "react-tilt";
+import { message } from "antd";
 
 const defaultOptions = {
   reverse: false, // reverse the tilt direction
@@ -19,6 +21,18 @@ const defaultOptions = {
 };
 
 const Home = ({ darkMode }) => {
+  const [messageApi, contextHolder] = message.useMessage();
+  const email = "tarunsaisrinivas7@gmail.com";
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(email);
+      messageApi.success("Email address copied to clipboard!");
+    } catch (err) {
+      console.error("Failed to copy text: ", err);
+    }
+  };
+
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
@@ -30,6 +44,7 @@ const Home = ({ darkMode }) => {
         darkMode ? "bg-gray-300" : ""
       }`}
     >
+      {contextHolder}
       <div className="container flex flex-col items-center justify-between px-8 py-16 mx-auto dark:bg-[#edf2f4] md:flex-row md:py-28">
         {/* Text Content */}
         <div
@@ -47,7 +62,7 @@ const Home = ({ darkMode }) => {
           <div
             className={`mb-8 text-2xl font-bold ${
               darkMode ? "text-red-600" : ""
-            }  text-blue-400`}
+            } text-blue-400`}
           >
             <Typewriter
               options={{
@@ -90,46 +105,49 @@ const Home = ({ darkMode }) => {
               link="https://drive.google.com/file/d/1_pdq2FAQH6O5cXMxaCpOnU3VeZd9mCb0/view?usp=sharing"
               icon={<FaFileAlt size={30} />}
             />
+            <Button
+              onClick={handleCopy}
+              className="flex items-center justify-center px-4 py-2 transition duration-300 bg-gray-700 border-4 border-gray-800 dark:text-gray-800 dark:bg-[#edf2f4] rounded-2xl dark:hover:bg-blue-400 hover:bg-blue-400 hover:text-black"
+              icon={<IoIosMail size={30} />}
+            />
           </div>
         </div>
         {/* Image */}
-          <div className="mt-8 md:mt-0 md:w-1/2" data-aos="fade-left">
-        <Tilt options={defaultOptions} className="transition-all">
+        <div className="mt-8 md:mt-0 md:w-1/2" data-aos="fade-left">
+          <Tilt options={defaultOptions} className="transition-all">
             <img
               src="/Cartoon-Avatar-On-Circle-Background-removebg-preview.png"
               alt=""
-              className="m-auto cursor-pointer rounded-full w-44 md:w-64 lg:w-80 "
+              className="m-auto cursor-pointer rounded-full w-44 md:w-64 lg:w-80"
             />
-        </Tilt>
-          </div>
+          </Tilt>
+        </div>
       </div>
-
-      {/* <p className="flex justify-center items-center space-x-4">
-        <img
-          src="https://github-readme-stats.vercel.app/api/top-langs?username=tarunsaisrinivas&show_icons=true&locale=en&layout=compact"
-          alt="tarunsaisrinivas"
-          className="h-52"
-        />
-        <img
-          src="https://github-readme-streak-stats.herokuapp.com/?user=tarunsaisrinivas&"
-          alt="tarunsaisrinivas"
-        />
-      </p> */}
     </div>
   );
 };
 
 // Button component
-const Button = ({ link, icon }) => {
+const Button = ({ link, icon, onClick, className }) => {
+  if (link) {
+    return (
+      <a
+        href={link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`flex items-center justify-center px-4 py-2 transition duration-300 bg-gray-700 border-4 border-gray-800 dark:text-gray-800 dark:bg-[#edf2f4] rounded-2xl dark:hover:bg-blue-400 hover:bg-blue-400 hover:text-black ${className}`}
+      >
+        <span className="inline-block">{icon}</span>
+      </a>
+    );
+  }
   return (
-    <a
-      href={link}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex items-center justify-center px-4 py-2 transition duration-300 bg-gray-700 border-4 border-gray-800 dark:text-gray-800 dark:bg-[#edf2f4] rounded-2xl dark:hover:bg-blue-400 hover:bg-blue-400 hover:text-black"
+    <button
+      onClick={onClick}
+      className={`flex items-center justify-center px-4 py-2 transition duration-300 bg-gray-700 border-4 border-gray-800 dark:text-gray-800 dark:bg-[#edf2f4] rounded-2xl dark:hover:bg-blue-400 hover:bg-blue-400 hover:text-black ${className}`}
     >
       <span className="inline-block">{icon}</span>
-    </a>
+    </button>
   );
 };
 
