@@ -3,6 +3,19 @@ import { CiShare1 } from "react-icons/ci";
 import { FaDownload,FaGithub } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Tilt } from 'react-tilt'
+
+const defaultOptions = {
+	reverse:        false,  // reverse the tilt direction
+	max:            30,     // max tilt rotation (degrees)
+	perspective:    1000,   // Transform perspective, the lower the more extreme the tilt gets.
+	scale:          1.1,    // 2 = 200%, 1.5 = 150%, etc..
+	speed:          1000,   // Speed of the enter/exit transition
+	transition:     true,   // Set a transition on enter/exit.
+	axis:           null,   // What axis should be disabled. Can be X or Y.
+	reset:          true,    // If the tilt effect has to be reset on exit.
+	easing:         "cubic-bezier(.03,.98,.52,.99)",    // Easing on enter/exit.
+}
 
 const Projects = ({darkMode}) => {
   useEffect(() => {
@@ -16,6 +29,7 @@ const Projects = ({darkMode}) => {
       </h1>
       <div className="container grid grid-cols-1 gap-8 mx-auto md:grid-cols-2 lg:grid-cols-2">
         {/* Card 1 */}
+        <Tilt options={defaultOptions}>
         <div
           className="flex bg-gray-700 rounded-lg shadow-md cursor-pointer hover:shadow-lg hover:shadow-slate-500 "
           data-aos="fade-up"
@@ -48,8 +62,9 @@ const Projects = ({darkMode}) => {
             </a>
           </div>
         </div>
-
+        </Tilt>
         {/* Card 2 */}
+        <Tilt options={defaultOptions}>
         <div
           className="flex bg-gray-700 rounded-lg shadow-md cursor-pointer hover:shadow-lg hover:shadow-slate-500 "
           data-aos="fade-up"
@@ -82,8 +97,9 @@ const Projects = ({darkMode}) => {
             </a>
           </div>
         </div>
-
+        </Tilt>
         {/* Card 3 */}
+        <Tilt options={defaultOptions}>
         <div
           className="flex bg-gray-700 rounded-lg shadow-md cursor-pointer hover:shadow-lg hover:shadow-slate-500 "
           data-aos="fade-up"
@@ -118,7 +134,9 @@ const Projects = ({darkMode}) => {
             </div>
           </div>
         </div>
+        </Tilt>
         {/* Card 4 */}
+        <Tilt options={defaultOptions}>
         <div
           className="flex bg-gray-700 rounded-lg shadow-md cursor-pointer hover:shadow-lg hover:shadow-slate-500 "
           data-aos="fade-up"
@@ -154,7 +172,7 @@ const Projects = ({darkMode}) => {
             </div>
           </div>
         </div>
-
+        </Tilt>
         {/* Add more cards here */}
       </div>
     </div>

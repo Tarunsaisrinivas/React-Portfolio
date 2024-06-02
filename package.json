@@ -24,6 +24,7 @@
     "react-icons": "^5.0.1",
     "react-router-dom": "^6.22.3",
     "react-scroll": "^1.9.0",
+    "react-tilt": "^1.0.2",
     "require": "^2.4.20",
     "typewriter-effect": "^2.21.0"
   },
